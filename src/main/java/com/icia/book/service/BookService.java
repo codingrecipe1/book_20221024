@@ -30,6 +30,15 @@ public class BookService {
     public List<BookDTO> findAll() {
         return bookRepository.findAll();
     }
+
+    /*
+        리턴타입:
+        매개변수:
+        메서드이름:
+     */
+    public BookDTO findById(Long bookId) {
+        return bookRepository.findById(bookId);
+    }
 }
 
 

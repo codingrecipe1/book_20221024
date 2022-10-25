@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -43,6 +44,13 @@ public class BookController {
         List<BookDTO> bookList = bookService.findAll();
         model.addAttribute("bookList", bookList);
         return "bookList";
+    }
+
+    @GetMapping("/book")
+    public String findById(@RequestParam("bookId") Long bookId, Model model) {
+        BookDTO bookDTO = bookService.findById(bookId);
+        model.addAttribute("book", bookDTO);
+        return "findBook";
     }
 }
 

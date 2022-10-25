@@ -13,4 +13,7 @@
     <select id="findAll" resultType="book">
         select * from book_table
     </select>
+    <select id="findById" parameterType="Long" resultType="book">
+        select * from book_table where bookId=#{bookId}
+    </select>
 </mapper>
