@@ -1,0 +1,4 @@
+# Project exclude paths
+/target/
+/src/main/webapp/WEB-INF/root-context.xml
+/src/main/webapp/WEB-INF/servlet-context.xml
