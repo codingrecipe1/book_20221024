@@ -10,4 +10,7 @@
     <select id="findBook" resultType="book">
         select * from book_table where bookId=2
     </select>
+    <select id="findAll" resultType="book">
+        select * from book_table
+    </select>
 </mapper>
